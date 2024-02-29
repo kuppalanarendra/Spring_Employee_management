@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		body{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		   top: 8pc;
+		}
+		form{
+			height: 300px;
+			width: 400px;
+			border: 1px solid yellow;
+			background-color:lightblue;
+			color:rgb(255, 0, 0);
+			text-decoration: double;
+			
+		}
+		h2{
+			text-align: center;
+			color: darkgreen;
+		}
+		input:hover{
+			color: blue;
+			border: 1px solid red;
+			
+		}
+		
+
+	</style>
+</head>
+
+<body>
+	<form action="/update" method="post" modelAttribute="emp">
+		<h2>Edit Your Details</h2>
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><input type="text" name="id" th:value="${emp.id}"></td>
+				
+			</tr>
+
+			<td>FirstName:-</td>
+			<td><input type="text" name="firstname" th:value="${emp.firstname}"></td>
+			</tr>
+			<tr>
+				<td>LastName</td>
+				<td><input type="text" name="lastname" th:value="${emp.lastname}"></td>
+			</tr>
+			<tr>
+				<td>EmaiId</td>
+				<td><input type="text" name="emailid" th:value="${emp.emailid}"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" name="password" th:value="${emp.password}"></td>
+			</tr>
+			<tr>
+				<td>PhoneNumber</td>
+				<td><input type="text" name="phonenumber" th:value="${emp.phonenumber}"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" name="address" th:value="${emp.address}"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Edit&Submit"></td>
+			</tr>
+
+		</table>
+
+	</form>
+
+
+
+
+</body>
+
+</html>

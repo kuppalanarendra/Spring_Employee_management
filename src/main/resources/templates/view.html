@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+
+</head>
+<body>
+	<table border="1px solid ">
+		<tr>
+			<th>Id</th>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>Emaild</th>
+			<th>Password</th>
+			<th>PhoneNumber</th>
+			<th>Address</th>
+			<th>Edit</th>
+			<th>Delete</th>
+			
+		</tr>
+		<tr th:each="emp :${eachemp}">
+				<td th:text="${emp.id}"></td>
+				<td th:text="${emp.firstname}"></td>
+				<td th:text="${emp.lastname}"></td>
+				<td th:text="${emp.emailid}"></td>
+				<td th:text="${emp.password}"></td>
+				<td th:text="${emp.phonenumber}"></td>
+				<td th:text="${emp.address}"></td>
+				<td> <a th:href="@{/get/{id}(id=${emp.id})}" id="${emp.id}">Edit</a> </td>
+				<td> <a th:href="@{/del/{id}(id=${emp.id})}" id="${emp.id}">Delete</a>
+				</td>
+				
+				
+			</tr>
+	</table>
+
+</body>
+</html>
